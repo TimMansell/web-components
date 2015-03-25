@@ -43,16 +43,16 @@
                 <section data-background="assets/img/webcomponents_new.svg"></section>
 
                 <section>
-                    <h1>Web Components</h1>
+                    <h2>Web Components</h2>
 
                     <p>
-                        <small><a href="http://timmansell.com">Tim Mansell</a> / <a href="http://twitter.com/timmansell">@timmansell</a></small>
+                        <a target="_blank" href="http://timmansell.com">timmansell.com</a> / <a target="_blank" href="http://twitter.com/timmansell">@timmansell</a>
                     </p>
                 </section>
 
                 <section>
                     <section>
-                        <h2>What are Web Components?</h2>
+                        <h3>What are Web Components?</h3>
                     </section>
 
                     <section>
@@ -64,18 +64,23 @@
                 <!-- Example of nested vertical slides -->
                 <section>
                     <section>
-                        <h2>But first... a little history</h2>
+                        <h3>But first... a little history</h3>
                     </section>
+                    
                     <section>
-                        <h2>Web 1.0</h2>
+                        <h3>Web 1.0</h3>
+                    </section>
+                    
+                    <section>
+                            <h3>Web 1.0</h3>
                         
-                        <ul>
-                            <li>Static pages</li>
-                            <li>Table based layouts</li>
-                            <li>Animated GIFs</li>
-                            <li>Very limited CSS selectors</li>
-                            <li>Everything was built using elements</li>
-                        </ul>
+                            <ul>
+                                <li>Static pages</li>
+                                <li>Table based layouts</li>
+                                <li>Animated GIFs</li>
+                                <li>Very pmited CSS selectors</li>
+                                <li>Everything was built using elements</li>
+                            </ul>
 
 <pre style="width:540px"><code data-trim>
 <h1></h1>
@@ -89,8 +94,14 @@
 </code></pre>
 
                     </section>
+                    
+
                     <section>
-                        <h2>Web 2.0</h2>
+                        <h3>Web 2.0</h3>
+                    </section>
+
+                    <section>
+                        <h3>Web 2.0</h3>
                         
                         <ul>
                             <li>Dynamic pages</li>
@@ -107,7 +118,7 @@
 
                 <section>
                     <section>
-                        <h2>Issues with this approach</h2>
+                        <h3>Issues with this approach</h3>
                         
                         <ul>
                             <li>JS &amp; CSS bleeding all over the page
@@ -116,9 +127,10 @@
                                     <li>specificity conflicts
                                     <ul>
                                         <li>body #content .alternative p</li>
+                                        <li>!important</li>
                                     </ul>
                                     </li>
-                                    <li>!important</li>
+                                    
                                 </ul>
                             </li>
                             <li>Non-semantic (descriptive) code.
@@ -133,62 +145,48 @@
                     <section data-background="assets/img/div-soup.jpg"></section>
 
                     <section>
-                        <h2>DIVs are the new Tables</h2>
+                        <h3>DIVs are the new Tables</h3>
                     </section>
                 </section>
 
                 <section>
                     <section>
-                        <h2>There must be a better way</h2>
+                        <h3>There must be a better way</h3>
+
                     </section>
 
                     <section>
-                        <ul>
-                            <li class="fragment roll-in">What if browsers made it easier to build modular, more encapsulated code?</li>
-                            <li class="fragment roll-in">What if we could teach new elements to the browser?</li>
-                        </ul>
-                        
+                   
+                        <p>What if browsers made it easier to build modular, more encapsulated code?</p>
+                        <p class="fragment roll-in">What if we could teach new elements to the browser?</p>
+                        <br>
                         <pre class="fragment roll-in"><code data-trim contenteditable><my-awesome-element></my-awesome-element></code></pre>
                     </section>
 
                 </section>
 
                 <section>
-                    <h2>Web Components to the rescue!</h2>
+                    <h3>Web Components to the rescue!</h3>
                     
                     <img src="assets/img/modularise-all-the-things.jpg">
                 </section>
 
                 <section>
-                    <h2>So what are exactly Web Components?</h2>
+                    <h3>So what are exactly Web Components?</h3>
                     
-                    <ul>
+                    <ol>
                         <li class="fragment roll-in">Custom Elements</li>
                         <li class="fragment roll-in">HTML Templates</li>
                         <li class="fragment roll-in">Shadow DOM</li>
                         <li class="fragment roll-in">HTML Imports</li>
-                    </ul>
+                    </ol>
 
                 </section>
 
                 <section>
                     <section>
-                        <!-- <h3>Current way of doing things<br><br>vs<br><br>Web Components</h3>
 
-                        <p class="fragment" data-fragment-index="3">Appears last</p> -->
-
-                        <h3>
-                            
-                            <span class="fragment fade-out" data-fragment-index="1" style="width:100%; display:block;">Current way of doing things</span>
-                                
-                            <span class="fragment" data-fragment-index="2">Yesterday</span><br>
-
-                            <span class="fragment" data-fragment-index="1">vs</span><br><br>
-
-                            <span class="fragment" data-fragment-index="2">Today</span><br>
-
-                            <span class="fragment fade-out" data-fragment-index="1">Web Components</span>
-                        </h3>
+                        <h3>Current way of doing things<br><small>(Yesterday)</small><br>vs<br>Web Components<br><small>(Today)</small></h3>
                     </section>
 
                     <section>
@@ -243,7 +241,7 @@
 
                 <section>
                     <section>
-                        <h2>Custom Elements</h2>
+                        <h3>Custom Elements</h3>
                         <p>Custom Elements enable developers to create their own custom HTML/DOM elements. It enables easier component reuse.</p>
                     </section>
 
@@ -275,7 +273,7 @@ var XFoo = document.registerElement('x-foo', {
                     
                     <section>
 
-                        <h2>JS only</h2>
+                        <h3>JS only</h3>
 
 <pre><code data-trim>
 var XJS = document.registerElement('x-js');
@@ -292,36 +290,30 @@ document.body.appendChild(document.createElement('x-jsx'));
                     </section>
 
                     <section>
-                        <h2>Rules</h2>
+                        <h3>Rules</h3>
 
-                        <p>You need to have at least one '-' inside the name of your custom element. Any tag names without '-' will result in an error.</p>
+                        <p>You need to have at least one '-' inside the name of your custom element. <br>Any tag names without '-' will result in an error.</p>
 
-                        <h5>Good</h5>
-                        <ul>
-                            <li>x-component</li>
-                            <li>x-web-component</li>
-                        </ul>
+                        <h5>Good :)</h5>
+                       
+                        <p>x-component<br>x-web-component</p>
+                       
 
-                        <h5>Bad</h5>
-                        <ul>
-                            <li>xcomponent</li>
-                            <li>x_component</li>
-                        </ul>
-
+                        <h5>Bad :(</h5>
+                        
+                        <p>xcomponent<br>x_component</p>
 
                     </section>
 
                     
 
                     <section>
-                        <h2>Extending native elements</h2>
-
-                        <h5>(Type Extension Custom Element)</h5>
+                        <h3>Extending native elements<br><small>(Type Extension Custom Element)</small></h3>
 
                         <p>You can create a custom element that extends a native HTML element's features.</p>
 
 <pre><code data-trim>
-var XComponent = document.registerElement('x-component', {
+var XFoo = document.registerElement('x-foo', {
   extends: 'input',
   prototype: Object.create(HTMLInputElement.prototype)
 });
@@ -330,59 +322,62 @@ var XComponent = document.registerElement('x-component', {
                         <p>To use the element, use the original tag and specify the custom tag name using the "is" attribute.</p>
 
 <pre><code data-trim>
-<input is="x-component">
+<input is="x-foo">
 </code></pre>
 
 
                     </section>
 
                     <section>
-                        <h2>What is the benefit of this?</h2>
+                        <h3>What is the benefit of this?</h3>
 
-                        <p>The benefit of extending native elements is that even if Javascript is turned off or the browser doesn't support Custom Elements, the element will still show, but fallback to it’s base state.</p> 
+                        <p>The benefit of extending native elements is that even if JS is turned off or the browser doesn't support Custom Elements, the element will still show, but fallback to it’s base state.</p> 
                     </section>
 
                     <section>
-                        <h2>Example</h2>
+                        <h3>Example</h3>
                     </section>
 
                     <section>
+                        <h4>JS enabled</h4>
                         <img src="assets/img/custom-element-time-js.jpg">
+
+                        <h4>JS disabled</h4>
                         <img src="assets/img/custom-element-time-no-js.jpg">
 
-                        <small><a target="_blank" href="https://github.com/github/time-elements">https://github.com/github/time-elements</a></small>
-                    </section>
-
-                    <section>
-                        <h2>Lifecycle callbacks</h2>
-
-                        <ul>
-                            <li>.createdCallback()
-                                <ul><li>Called after the element is created.</li></ul>
-                            </li>
-                            <li>.attachedCallback()
-                                <ul><li>Called when the element is attached to the document</li></ul>
-                            </li>
-                            <li>.detachedCallback()
-                                <ul><li>Called when the element is detached from the document.</li></ul>
-                            </li>
-                            <li>.attributeChangedCallback()
-                                <ul><li>Called when one of attributes of the element is changed.</li></ul>
-                            </li>
-                        </ul>
-                        
-
-
-
+                        <div><small><a target="_blank" href="https://github.com/github/time-elements">https://github.com/github/time-elements</a></small></div>
 
                     </section>
 
                     <section>
-                        <h4>Browser Support</h4>
+                        <h3>Lifecycle callbacks</h3>
 
-                        <img src="assets/img/custom-elements-browsers.jpg" width="800">
+                        <pre><code data-trim>
+                        .createdCallback() //Called after the element is created.
+                        </code></pre>
+
+                        <pre><code data-trim>
+                        .attachedCallback() // Called when the element is attached to the document.
+                        </code></pre>
+
+                        <pre><code data-trim>
+                        .detachedCallback() // Called when the element is detached from the document.
+                        </code></pre>
+
+                        <pre><code data-trim>
+                        .attributeChangedCallback() // Called when one of attributes of the element is changed.
+                        </code></pre>
+
+                         <small><a target="_blank" href="http://codepen.io/TimMansell/pen/ZYVmdX">http://codepen.io/TimMansell/pen/ZYVmdX</a></small>
+               
+                    </section>
+
+                    <section>
+                        <h3>Browser Support</h3>
+
+                        <img src="assets/img/custom-elements-browsers.jpg" width="750">
                         
-                        <small><a target="_blank" href="http://caniuse.com/#feat=custom-elements">http://caniuse.com/#feat=custom-elements</a></small>
+                        <div><small><a target="_blank" href="http://caniuse.com/#feat=custom-elements">http://caniuse.com/#feat=custom-elements</a></small></div>
 
                     </section>
 
@@ -390,12 +385,12 @@ var XComponent = document.registerElement('x-component', {
 
                 <section>
                     <section>
-                        <h2>HTML Templates</h2>
+                        <h3>HTML Templates</h3>
                     </section>
 
                     <section>
 
-                    <p>Setup</p>
+                    <h3>Setup</h3>
 
 <pre><code data-trim>
 <template id="template">
@@ -431,9 +426,9 @@ hostTemplate.appendChild(clonedTemplate);
                         <h4>Benefits</h4>
 
                         <ul>
-                            <li> markup is hidden DOM and does not render until it is activated</li>
-                            <li>Script doesn't run, images don't load, audio doesn't play,...until the template is used</li>
-                            <li>Templates can be placed anywhere inside of &lt;head&gt;, &lt;body&gt;</li>
+                            <li>Markup is hidden DOM and does not render until it is activated</li>
+                            <li>Scripts don't run, images don't load, audio doesn't play until the template is used</li>
+                            <li>Templates can be placed anywhere inside of &lt;head&gt; and &lt;body&gt;</li>
                         </ul>
 
                     </section>
@@ -441,7 +436,7 @@ hostTemplate.appendChild(clonedTemplate);
                     <section>
                         <h4>Browser Support</h4>
 
-                        <img src="assets/img/templates-browsers.jpg" width="800">
+                        <div><img src="assets/img/templates-browsers.jpg" width="800"></div>
                         
                         <small><a target="_blank" href="http://caniuse.com/#search=html%20templates">http://caniuse.com/#search=html%20templates</a></small>
 
@@ -450,13 +445,13 @@ hostTemplate.appendChild(clonedTemplate);
 
                 <section>
                     <section>
-                        <h2>Shadow DOM</h2>
+                        <h3>Shadow DOM</h3>
 
                         <p>With a Shadow DOM it is finally possible to write CSS rules that aren't global, enabling true modular development.</p>
                     </section>
 
                     <section>
-                        <h2>What is a Shadow DOM?</h2>
+                        <h3>What is a Shadow DOM?</h3>
 
                         <p>An element that has a shadow root associated with it is called a shadow host. The shadow root can be treated as an ordinary DOM element so you can append arbitrary nodes to it.</p>
 
@@ -464,7 +459,8 @@ hostTemplate.appendChild(clonedTemplate);
                     </section>
 
                      <section>
-                        <p>With Shadow DOM, all markup and CSS are scoped to the host element. In other words, CSS styles defined inside a Shadow Root won't affect its parent document, CSS styles defined outside the Shadow Root won't affect the main page.</p>
+                        <p>All markup and CSS are scoped to the host element.</p>
+                        <p>CSS styles defined inside a Shadow Root won't affect its parent document and CSS styles defined outside the Shadow Root won't affect the main page.</p>
                     </section>
 
                      <section>
@@ -497,7 +493,7 @@ root.textContent = 'Hello, from the shadow world!';
                     <section>
                         <h4>Browser Support</h4>
 
-                        <img src="assets/img/shadow-dom-browsers.jpg" width="700">
+                        <div><img src="assets/img/shadow-dom-browsers.jpg" width="700"></div>
                         
                         <small><a target="_blank" href="http://caniuse.com/#search=shadow%20dom">http://caniuse.com/#search=shadow%20dom</a></small>
 
@@ -506,9 +502,9 @@ root.textContent = 'Hello, from the shadow world!';
 
                 <section>
                     <section>
-                        <h2>HTML Imports</h2>
+                        <h3>HTML Imports</h3>
 
-                        <p>HTML Templates, Shadow DOM, and Custom Elements enable you to build UI components easier than before. But it's not efficient to load resources such as HTML, CSS and JavaScript separately.</p>
+                        <p>HTML Templates, Shadow DOM, and Custom Elements enable you to build components easier than before. But it's not efficient to load resources such as HTML, CSS, and JS separately.</p>
 
                         <p>HTML Imports allow you to load those resources as a single HTML file.</p>
                     </section>
@@ -522,7 +518,7 @@ root.textContent = 'Hello, from the shadow world!';
                     </section>
 
                     <section>
-                        <h4>Let’s put it all together</h4>
+                        <h3>Let’s put it all together</h3>
                     </section>
 
                     <section>
@@ -575,7 +571,7 @@ var XComponent = document.registerElement('x-component', {
                     <section>
                         <h4>Browser Support</h4>
 
-                        <img src="assets/img/html-imports-browsers.jpg" width="700">
+                        <div><img src="assets/img/html-imports-browsers.jpg" width="700"></div>
                         
                         <small><a target="_blank" href="http://caniuse.com/#search=shadow%20dom">http://caniuse.com/#search=shadow%20dom</a></small>
 
@@ -584,7 +580,7 @@ var XComponent = document.registerElement('x-component', {
 
                 <section>
                     <section>
-                        <h2>TIL that we're all using Web Components</h2>
+                        <h3>TIL that we're all using<br> Web Components</h3>
                     </section>
 
                     <section data-background="assets/img/video-shadow-root.jpg"></section>
@@ -592,7 +588,7 @@ var XComponent = document.registerElement('x-component', {
 
                 <section>
                     <section>
-                        <h2>What about SEO?</h2>
+                        <h3>What about SEO?</h3>
                     </section>
 
                     <section>
@@ -603,16 +599,19 @@ var XComponent = document.registerElement('x-component', {
 
                 <section>
                     <section>
-                        <h2>Accesibility you say?</h2>
+                        <h3>Accessibility you say?</h3>
                     </section>
 
                     <section>
 
                         <blockquote>“Results from initial testing indicate that inclusion of ARIA roles, states and properties in content wholly inside the Shadow DOM works fine. The accessibility information is exposed correctly via the accessibility API. Screen readers can access content in the Shadow DOM without issue.“</blockquote>
 
-                        <p><small>Steve Faulkner</small></p>
+                        <p>
+                            <small>Steve Faulkner</small><br>
+                            <small><a target="_blank" href="http://www.paciellogroup.com/blog/2012/07/notes-on-web-components-aria/">http://www.paciellogroup.com/blog/2012/07/notes-on-web-components-aria/</a></small>
+                        </p>
                         
-                        <small><a target="_blank" href="http://www.paciellogroup.com/blog/2012/07/notes-on-web-components-aria/">http://www.paciellogroup.com/blog/2012/07/notes-on-web-components-aria/</a></small>
+                        
 
                     </section>
 
@@ -620,9 +619,10 @@ var XComponent = document.registerElement('x-component', {
 
                         <blockquote>“Web Components, including Shadow DOM, are accessible because assistive technologies encounter pages as rendered, meaning the entire document is read as “one happy tree”.</blockquote>
 
-                        <p><small>Marcy Sutton</small></p>
-                        
-                        <small><a target="_blank" href="http://substantial.com/blog/2014/02/05/accessibility-and-the-shadow-dom/">http://substantial.com/blog/2014/02/05/accessibility-and-the-shadow-dom/</a></small>
+                        <p>
+                            <small>Marcy Sutton</small><br>
+                            <small><a target="_blank" href="http://substantial.com/blog/2014/02/05/accessibility-and-the-shadow-dom/">http://substantial.com/blog/2014/02/05/accessibility-and-the-shadow-dom/</a></small>
+                        </p>                      
 
                     </section>
 
@@ -631,32 +631,140 @@ var XComponent = document.registerElement('x-component', {
                 <section>
 
                     <section>
-                        <h2>So we can start using it now, Yeah?</h2>
+                        <h3>So we can start using it now,<br> Yeah?</h3>
                     </section>
 
                     <section>
-                        <h2>You sure can!</h2>
+                        <h3>You sure can!</h3>
 
-                        <p>But what about IE?</h2>
+                        <p>But what about IE?</h3>
                     </section>
 
                     <section data-background="assets/img/ie.jpg"></section>
                 </section>
                 
                 <section>
-                    <h2>Pollyfills</h2>
+                    <section>
+                        <h3>Pollyfills</h3>
                 
-                    <blockquote>"a polyfill (or polyfiller) is downloadable code which provides facilities that are not built into a web browser. It implements technology that a developer expects the browser to provide natively, providing a more uniform API landscape."</blockquote>
+                        <blockquote>"a polyfill (or polyfiller) is downloadable code which provides facilities that are not built into a web browser. It implements technology that a developer expects the browser to provide natively, providing a more uniform API landscape."</blockquote>
+                    </section>
+
+                    <section data-background="assets/img/web-components.jpg"></section>
+
+                    <section>
+                        <h4>Browser Support</h4>
+
+                        <img src="assets/img/polyermer-browser-support.jpg" width="800">
+                    </section>
                 </section>
 
                 <section>
-                    <img src="assets/img/polymer.svg" width="750">
+
+                    <section>
+                        <img src="assets/img/polymer.svg" width="750">
+
+                        <p><a target="_blank" href="https://polymer-project.org">polymer-project.org</a></p>
+                    </section>
+
+                    <section>
+                        <p>Polymer is a library that uses the latest web technologies to let you create custom HTML elements.</p>
+                    </section>
+
+                    <section>
+                        <img src="assets/img/polymer-layers.png" width="850">
+                    </section>
+
+                    <section>
+                        <h3>Everything is an element</h3>
+                    </section>
+
+                    <section>
+                        <h3>Visual Elements</h3>
+
+                        <p>&lt;paper-toggle-button&gt; <a target="_blank" href="https://www.polymer-project.org/0.5/components/paper-elements/demo.html#paper-toggle-button">Demo</a></p>
+
+                        <p>&lt;paper-tab&gt; <a target="_blank" href="https://www.polymer-project.org/0.5/components/paper-elements/demo.html#paper-tabs">Demo</a></p>
+
+                        <p>&lt;paper-dialog&gt; <a target="_blank" href="https://www.polymer-project.org/0.5/components/paper-elements/demo.html#paper-dialog">Demo</a></p>
+
+                        <p>&lt;core-toolbar&gt; <a target="_blank" href="https://www.polymer-project.org/0.5/components/paper-elements/demo.html#core-toolbar">Demo</a></p>
+
+                        <p>&lt;core-collapse&gt; <a target="_blank" href="https://www.polymer-project.org/0.5/components/core-collapse/demo.html">Demo</a></p>
+
+                        <p>&lt;core-image&gt; <a target="_blank" href="https://www.polymer-project.org/0.5/components/core-image/demo.html">Demo</a></p>
+                    </section>
+
+                    <section>
+                        <h3>utility elements</h3>
+
+                        <p>&lt;core-ajax&gt; <a target="_blank" href="https://www.polymer-project.org/0.5/components/core-ajax/demo.html">Demo</a></p>
+
+                        <p>&lt;core-dropdown-menu&gt; <a target="_blank" href="https://www.polymer-project.org/0.5/components/core-dropdown-menu/demo.html">Demo</a></p>
+
+                        <p>&lt;core-icon&gt; <a target="_blank" href="https://www.polymer-project.org/0.5/components/core-icon/demo.html">Demo</a></p>
+
+                        <p>&lt;core-media-query&gt; <a target="_blank" href=" https://www.polymer-project.org/0.5/components/core-media-query/demo.html">Demo</a></p>
+
+                        <p>&lt;core-scaffold&gt; <a target="_blank" href=" https://www.polymer-project.org/0.5/components/core-scaffold/demo.html">Demo</a></p>
+                    </section>
+
+                    <section>
+                        <h3>Creating an element</h3>
+
+<pre><code data-trim>
+<link rel="import" href="polymer.html">
+</code></pre>
+
+<pre><code data-trim>
+<polymer-element name="x-foo" noscript>
+  <template>
+    <style>h3 { color: blue; }</style>
+    <h3>I'm inside the element!</h3>
+  </template>
+</polymer-element>
+</code></pre>
+
+<pre><code data-trim>
+<my-foo></my-foo>
+</code></pre>
+
+                    </section>
+
+                    <section>
+                        <h3>Using an element</h3>
+
+                        <p>Import</p>
+
+<pre><code data-trim>
+&lt;head&gt;
+    <script src="webcomponents.js"></script>
+    <link rel="import" href="core-toolbar.html">
+    <link rel="import" href="core-icon-button.html">
+&lt;/head&gt;
+</code></pre>
+
+                        <p>Use</p>
+
+<pre><code data-trim>
+<core-toolbar>
+  <core-icon-button icon="menu"></core-icon-button>
+  <span flex>Toolbar</span>
+    <core-icon-button icon="refresh"></core-icon-button>
+  <core-icon-button icon="add"></core-icon-button>
+</core-toolbar>
+</code></pre>
+
+                    <img src="assets/img/polymer-toolbar.jpg" width="700">
+
+                    </section>
+
                 </section>
 
 
                 <section>
                     <section>
-                        <h2>Out in the wild</h2>
+                        <h3>Out in the wild</h3>
                     </section>
 
                     <section>
@@ -667,6 +775,13 @@ var XComponent = document.registerElement('x-component', {
                     <section>
                         <h4>&lt;chart-elements&gt;&lt;/chart-elements&gt;</h4>
                         <p><a target="_blank" href="http://robdodson.github.io/chart-elements/components/chart-elements/">Docs</a> | <a target="_blank" href="http://robdodson.github.io/chart-elements/components/chart-elements/demo.html">Demo</a></p>
+                    </section>
+
+                    <section>
+
+                        <h4>&lt;x-piano&gt;&lt;/x-piano&gt;</h4>
+                        <p><a target="_blank" href="http://korilakkuma.github.io/x-piano">Docs</a> | <a target="_blank" href="http://korilakkuma.github.io/x-piano/demo/import.html">Demo</a> | <a target="_blank" href="http://korilakkuma.github.io/x-piano/demo/import-polymer.html">Polymer</a></p>
+
                     </section>
 
                     <section>
@@ -684,23 +799,23 @@ var XComponent = document.registerElement('x-component', {
                     <section>
                         <h3>customelements.io</h3>
                         <p>a web components gallery for modern web apps</p>
+
+                        <p><a target="_blank" href="http://customelements.io/">customelements.io</a></p>
                     </section>
 
                     <section data-background="assets/img/custom-elements-lib.jpg"></section>
                 </section>
 
                 <section>
-                    <h2>Food for thought</h2>
-                    <p>What if… the entire web platform was hosted on Github?</p>
-                    <p>https://github.com/domenic/html-as-custom-elements</p>
+                    <h3>Food for thought</h3>
+                    <p>What if the entire web platform was hosted on Github?</p>
+                    <small><a target="_blank" href="https://github.com/domenic/html-as-custom-elements">github.com/domenic/html-as-custom-elements</a></small>
                 </section>
 
                 <section style="text-align: left;">
+
                     <h1>THE END</h1>
-                    <p>
-                        - <a href="http://slides.com">Try the online editor</a> <br>
-                        - <a href="https://github.com/hakimel/reveal.js">Source code &amp; documentation</a>
-                    </p>
+
                 </section>
 
             </div>
