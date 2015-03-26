@@ -32,6 +32,7 @@
         <!--[if lt IE 9]>
         <script src="lib/js/html5shiv.js"></script>
         <![endif]-->
+
     </head>
 
     <body>
@@ -40,7 +41,31 @@
 
             <!-- Any section element inside of this container is displayed as a slide -->
             <div class="slides">
-                <section data-background="assets/img/webcomponents_new.svg"></section>
+
+                <section>
+                    
+                    <style>
+                      @-webkit-keyframes roll {
+                        0% {transform: rotateY(0deg)}
+                        100% {transform: rotateY(360deg)}
+                      }
+                      .webcomponents {
+                        -webkit-transform-style: preserve-3d;
+                        -webkit-animation: roll 2s infinite linear;
+                      }
+                      #container {
+                        perspective: 1000px;
+                        width: 100%;
+                        text-align: center;
+                      }
+                    </style>
+                    
+                    <div id="container">
+                      <img style="box-shadow:none;background:transparent" class="webcomponents" src="http://webcomponents.org/img/logo.svg" width="850">
+                    </div>
+
+                </section>
+                
 
                 <section>
                     <h2>Web Components</h2>
