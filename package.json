@@ -1,0 +1,15 @@
+{
+  "name": "web-components",
+  "version": "1.0.0",
+  "description": "Presentation about web components",
+  "homepage": "web-components.timmansell.com",
+  "scripts": {
+    "serve": "serve ."
+  },
+  "engines": {
+    "node": "~0.10.0"
+  },
+  "dependencies": {
+    "serve": "^11.3.2"
+  }
+}
